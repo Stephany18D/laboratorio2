@@ -8,6 +8,8 @@ int p6() {
     cout << "Ingrese una cadena de caracteres: ";
     getline(cin, entrada);
 
+    cout << "Original: " << entrada << endl;
+
     for (char& c : entrada) {
         if (islower(c)) {
             c = toupper(c);
