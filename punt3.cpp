@@ -2,27 +2,23 @@
 
 using namespace std;
 
-bool cadenas(char cadena1[], char cadena2[]) {
-    int i = 0;
-    while (cadena1[i] != '\0' && cadena2[i] != '\0') {
-        if (cadena1[i] != cadena2[i]) {
+bool cadenas(string cadena1, string cadena2) {
+    if (cadena1.length() != cadena2.length()) {
             return false;
+        } else {
+            return cadena1 == cadena2;
         }
-        i++;
     }
-    return (cadena1[i] == '\0' && cadena2[i] == '\0');
-}
 
 int p3() {
-    char cadena1[] = "Hola";
-    char cadena2[] = "Hola";
+    string cadena1 = "Hola";
+    string cadena2 = "Hola";
+    string cadena3 = "Hello";
 
-    cout << "cadena1 (\"" << cadena1 << "\") y cadena2 (\"" << cadena2 << "\") son ";
-      if (cadenas(cadena1, cadena2)) {
-        cout << "iguales" << endl;
-      } else {
-        cout << "diferentes" << endl;
-      }
+    // 1 es verdadero
+    // 0 es falso
+    cout << cadenas(cadena1, cadena2) << endl;
+    cout << cadenas(cadena1, cadena3) << endl;
 
     return 0;
 }
